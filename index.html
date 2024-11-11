@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <h1 class="center-align"> AOU GPA Predictor</h1>
+            <p class="center-align">Predict your future GPA based on current and upcoming courses</p>
+        </header>
+        <div class="gpa-form">
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <input id="currentGPA" type="number" step="0.01" min="0" max="4" class="validate">
+                    <label for="currentGPA">Current GPA</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <input id="totalCredits" type="number" min="0" class="validate">
+                    <label for="totalCredits">Total Credits Completed</label>
+                </div>
+            </div>
+            <h4>Add Courses</h4>
+            <div id="courseList">
+                <!-- Courses will be added here dynamically -->
+            </div>
+            
+            <div class="row">
+                <button class="btn waves-effect waves-light col s12" id="addCourseBtn">Add Course</button>
+                <button class="btn waves-effect waves-light col s12" id="calculateBtn">Calculate GPA</button>
+            </div>
+        </div>
+        <div id="result" class="gpa-result">
+            <h3>Your Predicted GPA</h3>
+            <p id="predictedGPA">N/A</p>
+            <h5>Course Summary</h5>
+            <table id="courseSummary">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Developed by Fardeen</p>
+                <div class="social-links">
+                    <a href="https://github.com/afkhan-fardeen" target="_blank" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/afkhan-fardeen-khan/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://instagram.com/fardeen.khan21" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
